@@ -23,7 +23,7 @@ class Login_Database():
             self.conn.commit()
             self.cursor.close()
 
-    # checking for table avail
+    # checking for table available
     def is_table(self, table_name):
         query = "SELECT * from information_schema.tables WHERE table_name='{}';".format(table_name)
         cur = self.conn.cursor()
